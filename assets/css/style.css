@@ -1,22 +1,121 @@
+/* =======================================
+ Grundinställningar 
+ ======================================== */
+* {
+  box-sizing: border-box;
+}
+
+/* =======================================
+ Global styling
+ ======================================== */
 body {
-  font-family:
-    system-ui,
-    -apple-system,
-    sans-serif;
-  max-width: 40rem;
-  margin: 4rem auto;
-  padding: 0 1rem;
-  line-height: 1.6;
-  color: #1a1a1a;
+  font-family: "open sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #d7cfb59e;
+}
+/* =======================================
+  Rubriker och text
+  ======================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "playfair display", serif;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+.sidetitle {
+  font-size: 30px;
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+}
+/* =======================================
+ Header
+ ======================================== */
+.titletext {
+  color: #070400;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 65px;
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+}
+/* =======================================
+ Navigation
+  ======================================== */
+.navigator {
+  color: black;
+  padding: 10px;
+  font-family: "playfair display", serif;
+  text-decoration: none;
+  align-items: column;
+}
+content-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigator a {
+  text-decoration: none;
+  color: black;
+}
+.navigator a:hover {
+  color: #23e7099e;
+}
+.navigator a:active {
+  color: #dbdf0e9e;
+}
+.navigator a:visited {
+  color: #eb06069e;
 }
 
-h1 {
-  color: #2563eb;
+.navigator ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 20px;
 }
+/* =======================================
+ Hero
+  ======================================== */
+.hero {
+  background-image: url("../images/laurengraybakbord.webp");
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+  text-align: center;
+  color: #000000;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+.caption {
+  font-size: 15px;
+  text-align: right;
+  margin-top: 5px;
+  color: red;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+/* =======================================
+  Main  
+  ======================================== */
+.recipes-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+/* =======================================
+  Knappar och länkar
+  ======================================== */
 
-code {
-  background: #f1f5f9;
-  padding: 0.1rem 0.3rem;
-  border-radius: 3px;
-  font-size: 0.95em;
-}
+/* =======================================
+  Bilder och logotyp
+  ======================================== */
+
+/* =======================================
+  Footer
+  ======================================== */
