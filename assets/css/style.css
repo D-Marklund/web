@@ -9,7 +9,7 @@
  Global styling
  ======================================== */
 body {
-  font-family: "open sans", sans-serif;
+  font-family: "google sans", sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: #333;
@@ -24,20 +24,26 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "playfair display", serif;
+  font-family: "google sans", serif;
   font-weight: bold;
   margin-bottom: 16px;
   color: #3d2b22;
-  text-shadow: 1px 1px 2px black;
+  text-shadow: 1px 1px 2px white;
 }
 .sidetitle {
   color: #3d2b22;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "google sans", Times, serif;
   font-size: 70px;
   font-weight: bold;
   text-align: center;
   justify-content: center;
   justify-items: center;
+  text-shadow: 5px 5px 6px white;
+}
+figcaption {
+  font-family: "google sans", serif;
+  color: black;
+  text-shadow: 1px 1px 2px white;
 }
 /* =======================================
  Header
@@ -47,27 +53,28 @@ h6 {
  Navigation
   ======================================== */
 .navigator {
-  color: rgb(5, 5, 5);
+  color: rgb(83, 48, 14);
   padding: 10px;
-  font-family: "playfair display", serif;
+  font-family: "google sans", serif;
   text-decoration: none;
   align-items: column;
 }
 
 .navigator a {
+  font-size: 19px;
   text-decoration: none;
   color: black;
-  text-shadow: 1px 1px 2px rgba(7, 7, 7, 0.9);
+  text-shadow: 1px 1px 2px white;
 }
 .navigator a:hover {
-  color: #e02c1f;
+  color: #852f04b6;
 }
 .navigator a:active {
   color: #dbdf0e9e;
 }
-/*.navigator a:visited {
+.navigator a:visited {
   color: #e20c539e;
-}*/
+}
 
 .navigator ul {
   display: flex;
@@ -76,7 +83,7 @@ h6 {
   gap: 20px;
 }
 .linktitle {
-  color: #361b1be7;
+  color: #3d2b22;
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 45px;
   display: inline-block;
@@ -121,9 +128,45 @@ h6 {
 .recipes-layout {
   display: flex;
   align-items: flex-start;
-  gap: 30px;
+  gap: 35px;
 }
-.recipe-
+.recipe-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.recipe-list figure {
+  margin-left: 0;
+  max-width: 480px;
+}
+.recipe-list img {
+  align-items: center;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.recipe-list section {
+  background-color: #f2e9da;
+  padding: 25px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+}
+.recipe-list figure {
+  margin: 20px auto;
+  max-width: 480px;
+}
+.recipe-list hr {
+  border: 0;
+  border-top: 1px solid #d8c3a5;
+  margin: 25px 0;
+}
+.recipe-instructions {
+  border-left: 1px solid #d8c3a5;
+  padding-left: 30px;
+}
+
 /* =======================================
   Knappar och länkar
   ======================================== */
@@ -133,7 +176,7 @@ h6 {
 }
 
 .sidebar a:hover {
-  color: #e02c1f;
+  color: #852f04b6;
 }
 .sidebar ul {
   display: flex;
@@ -144,13 +187,19 @@ h6 {
   gap: 15px;
 }
 .sidebar {
-  font-family: "playfair display", serif;
+  font-family: "google sans", serif;
   white-space: nowrap;
   text-align: center;
   color: black;
 }
 .sidebarlinks a {
   color: black;
+  text-shadow: 1px 1px 2px white;
+}
+.sidebar {
+  position: sticky;
+  top: 20px;
+  align-self: flex-start;
 }
 .whiskandspoon {
   opacity: 0.9;
@@ -164,3 +213,4 @@ h6 {
 /* =======================================
   Footer
   ======================================== */
+
