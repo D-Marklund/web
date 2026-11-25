@@ -13,7 +13,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: #333;
-  background-color: #d7cfb59e;
+  background-color: #d8c3a5;
 }
 /* =======================================
   Rubriker och text
@@ -27,9 +27,14 @@ h6 {
   font-family: "playfair display", serif;
   font-weight: bold;
   margin-bottom: 16px;
+  color: #3d2b22;
+  text-shadow: 1px 1px 2px black;
 }
 .sidetitle {
-  font-size: 30px;
+  color: #3d2b22;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 70px;
+  font-weight: bold;
   text-align: center;
   justify-content: center;
   justify-items: center;
@@ -37,43 +42,32 @@ h6 {
 /* =======================================
  Header
  ======================================== */
-.titletext {
-  color: #070400;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 65px;
-  font-weight: bold;
-  text-align: center;
-  justify-content: center;
-  justify-items: center;
-}
+
 /* =======================================
  Navigation
   ======================================== */
 .navigator {
-  color: black;
+  color: rgb(5, 5, 5);
   padding: 10px;
   font-family: "playfair display", serif;
   text-decoration: none;
   align-items: column;
 }
-content-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
 .navigator a {
   text-decoration: none;
   color: black;
+  text-shadow: 1px 1px 2px rgba(7, 7, 7, 0.9);
 }
 .navigator a:hover {
-  color: #23e7099e;
+  color: #e02c1f;
 }
 .navigator a:active {
   color: #dbdf0e9e;
 }
-.navigator a:visited {
-  color: #eb06069e;
-}
+/*.navigator a:visited {
+  color: #e20c539e;
+}*/
 
 .navigator ul {
   display: flex;
@@ -81,25 +75,46 @@ content-nav {
   list-style: none;
   gap: 20px;
 }
+.linktitle {
+  color: #361b1be7;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 45px;
+  display: inline-block;
+}
 /* =======================================
  Hero
   ======================================== */
 .hero {
   background-image: url("../images/laurengraybakbord.webp");
+
   background-size: cover;
   background-position: center;
   padding: 30px;
   text-align: center;
   color: #000000;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-shadow:
+    0 0 25px rgba(255, 255, 255, 0.9),
+    1px 1px 25px rgba(0, 0, 0, 0.9);
 }
 .caption {
+  background-color: rgba(255, 255, 255, 0.6);
+  display: table;
+  margin: 5px 0 0 auto;
+  border-radius: 40px;
   font-size: 15px;
   text-align: right;
   margin-top: 5px;
-  color: red;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  color: black;
+  text-shadow: 1px 1px 2px rgba(116, 113, 113, 0.9);
 }
+.introtext {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 20px;
+  border-radius: 45px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(150, 150, 150, 0.9);
+}
+
 /* =======================================
   Main  
   ======================================== */
@@ -108,10 +123,40 @@ content-nav {
   align-items: flex-start;
   gap: 30px;
 }
+.recipe-
 /* =======================================
   Knappar och länkar
   ======================================== */
+.sidebar a {
+  display: block;
+  text-decoration: none;
+}
 
+.sidebar a:hover {
+  color: #e02c1f;
+}
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  text-decoration: none;
+  padding: 0;
+  gap: 15px;
+}
+.sidebar {
+  font-family: "playfair display", serif;
+  white-space: nowrap;
+  text-align: center;
+  color: black;
+}
+.sidebarlinks a {
+  color: black;
+}
+.whiskandspoon {
+  opacity: 0.9;
+  width: 50px;
+  height: 50px;
+}
 /* =======================================
   Bilder och logotyp
   ======================================== */
