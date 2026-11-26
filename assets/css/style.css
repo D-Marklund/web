@@ -13,7 +13,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: #333;
-  background-color: #d8c3a5;
+  background-color: #e6d7be;
 }
 /* =======================================
   Rubriker och text
@@ -36,8 +36,6 @@ h6 {
   font-size: 70px;
   font-weight: bold;
   text-align: center;
-  justify-content: center;
-  justify-items: center;
   text-shadow: 5px 5px 6px white;
 }
 figcaption {
@@ -57,7 +55,6 @@ figcaption {
   padding: 10px;
   font-family: "google sans", serif;
   text-decoration: none;
-  align-items: column;
 }
 
 .navigator a {
@@ -73,7 +70,7 @@ figcaption {
   color: #dbdf0e9e;
 }
 .navigator a:visited {
-  color: #e20c539e;
+  color: #ff01019e;
 }
 
 .navigator ul {
@@ -85,7 +82,7 @@ figcaption {
 .linktitle {
   color: #3d2b22;
   background-color: rgba(255, 255, 255, 0.6);
-  border-radius: 45px;
+  border-radius: 15px;
   display: inline-block;
 }
 /* =======================================
@@ -107,7 +104,7 @@ figcaption {
   background-color: rgba(255, 255, 255, 0.6);
   display: table;
   margin: 5px 0 0 auto;
-  border-radius: 40px;
+  border-radius: 5px;
   font-size: 15px;
   text-align: right;
   margin-top: 5px;
@@ -130,6 +127,11 @@ figcaption {
   align-items: flex-start;
   gap: 35px;
 }
+.recipe-list {
+  flex: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+}
 .recipe-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -142,7 +144,6 @@ figcaption {
   max-width: 480px;
 }
 .recipe-list img {
-  align-items: center;
   display: block;
   width: 100%;
   height: auto;
@@ -152,6 +153,9 @@ figcaption {
   padding: 25px;
   margin-bottom: 30px;
   border-radius: 15px;
+}
+.recipe-list section > p {
+  max-width: 750px;
 }
 .recipe-list figure {
   margin: 20px auto;
@@ -197,20 +201,45 @@ figcaption {
   text-shadow: 1px 1px 2px white;
 }
 .sidebar {
+  background-color: #f2e9da;
+  border-radius: 15px;
   position: sticky;
   top: 20px;
   align-self: flex-start;
 }
+
+/* =======================================
+  Bilder och logotyp
+  ======================================== */
 .whiskandspoon {
   opacity: 0.9;
   width: 50px;
   height: 50px;
 }
-/* =======================================
-  Bilder och logotyp
-  ======================================== */
-
+.goldenpie {
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+  width: 130px;
+  height: auto;
+}
 /* =======================================
   Footer
   ======================================== */
-
+.credits {
+  font-family: "google sans", Times, serif;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 5px 5px 6px white;
+}
+footer {
+  position: relative;
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.footer-text {
+  position: relative;
+  left: 78px;
+}
