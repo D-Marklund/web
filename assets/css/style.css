@@ -2,6 +2,8 @@
  Grundinställningar 
  ======================================== */
 * {
+  /* Gör så att padding och border räknas in i elementets totala bredd
+ och höjd. */
   box-sizing: border-box;
 }
 
@@ -9,6 +11,7 @@
  Global styling
  ======================================== */
 body {
+  /* Här anger jag hela sidans grundtypsnitt, textstorlek, radavstånd samt färger. */
   font-family: "google sans", sans-serif;
   font-size: 16px;
   line-height: 1.5;
@@ -18,6 +21,8 @@ body {
 /* =======================================
   Rubriker och text
   ======================================== */
+/* Jag har valt att använda samma typsnittsfamilj och textfärg på sidans rubriker
+  för att skapa ett utseende som hänger ihop på webbsidan. */
 h1,
 h2,
 h3,
@@ -28,9 +33,13 @@ h6 {
   font-weight: bold;
   margin-bottom: 16px;
   color: #3d2b22;
+  /* Jag har här använt mig av text-shadow på flera ställen här i CSS 
+  och det är för att framhäva texten och göra den mer lättläst.  */
   text-shadow: 1px 1px 2px white;
 }
 .sidetitle {
+  /* Min sidas huvudrubrik gav jag en större textstorlek 
+och en tydligare skugga för att den ska framhävas i sidhuvudet. */
   color: #3d2b22;
   font-family: "google sans", Times, serif;
   font-size: 70px;
@@ -44,10 +53,6 @@ figcaption {
   text-shadow: 1px 1px 2px white;
 }
 /* =======================================
- Header
- ======================================== */
-
-/* =======================================
  Navigation
   ======================================== */
 .navigator {
@@ -58,7 +63,8 @@ figcaption {
 }
 
 .navigator a {
-  font-size: 19px;
+  font-size: 21px;
+  font-weight: 600;
   text-decoration: none;
   color: black;
   text-shadow: 1px 1px 2px white;
@@ -108,8 +114,8 @@ figcaption {
   font-size: 15px;
   text-align: right;
   margin-top: 5px;
-  color: black;
-  text-shadow: 1px 1px 2px rgba(116, 113, 113, 0.9);
+  color: #3d2b22;
+  text-shadow: 1px 1px 2px rgba(36, 34, 34, 0.9);
 }
 .introtext {
   background-color: rgba(255, 255, 255, 0.6);
@@ -123,6 +129,8 @@ figcaption {
   Main  
   ======================================== */
 .recipes-layout {
+  /* Flexbox placerar sidomenyn bredvid receptinnehållet.
+  align-items gör att elementen börjar i överkant. */
   display: flex;
   align-items: flex-start;
   gap: 35px;
@@ -133,6 +141,8 @@ figcaption {
   margin: 0 auto;
 }
 .recipe-columns {
+  /* Grid delar upp receptens innehåll i två kolumner, 
+  så att ingredienser och instruktioner placeras bredvid varandra. */
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
@@ -140,7 +150,8 @@ figcaption {
   margin: 0 auto;
 }
 .recipe-list figure {
-  margin-left: 0;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 480px;
 }
 .recipe-list img {
@@ -149,6 +160,8 @@ figcaption {
   height: auto;
 }
 .recipe-list section {
+  /* Varje recept har en egen bakgrund, inre marginal och rundade hörn
+   för att det ska skilja sig från det övriga innehållet.  */
   background-color: #f2e9da;
   padding: 25px;
   margin-bottom: 30px;
@@ -157,16 +170,13 @@ figcaption {
 .recipe-list section > p {
   max-width: 750px;
 }
-.recipe-list figure {
-  margin: 20px auto;
-  max-width: 480px;
-}
 .recipe-list hr {
   border: 0;
   border-top: 1px solid #d8c3a5;
   margin: 25px 0;
 }
 .recipe-instructions {
+  /* En lodrät linje skiljer instruktionerna från ingredienserna. */
   border-left: 1px solid #d8c3a5;
   padding-left: 30px;
 }
@@ -191,48 +201,58 @@ figcaption {
   gap: 15px;
 }
 .sidebar {
+  /* Sidomenyn får här en egen bakgrund med rundade hörn.
+  Valde sticky för att menyn ska följa med när besökaren scrollar. */
   font-family: "google sans", serif;
   white-space: nowrap;
   text-align: center;
   color: black;
-}
-.sidebarlinks a {
-  color: black;
-  text-shadow: 1px 1px 2px white;
-}
-.sidebar {
   background-color: #f2e9da;
   border-radius: 15px;
   position: sticky;
   top: 20px;
   align-self: flex-start;
 }
+.sidebarlinks a {
+  color: black;
+  text-shadow: 1px 1px 2px white;
+}
 
 /* =======================================
   Bilder och logotyp
   ======================================== */
+/* Illustrationerna som finns här har jag lagt in som dekorativa inslag
+  för att utveckla webbsidans baktema. */
 .whiskandspoon {
   opacity: 0.9;
   width: 50px;
   height: 50px;
 }
 .goldenpie {
+  /* position:absolute placerar den i förhållande till den positionerade sidfoten. */
   position: absolute;
   right: 20px;
   bottom: 0;
   width: 130px;
   height: auto;
 }
+.kokostoppar-bild {
+  display: block;
+  width: 75%;
+  height: 250px;
+  object-fit: cover;
+  margin-top: 20px;
+  margin: 20px auto 0 auto;
+}
+#kokostoppar figure {
+  margin-left: auto;
+  margin-right: auto;
+}
 /* =======================================
   Footer
   ======================================== */
-.credits {
-  font-family: "google sans", Times, serif;
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-  text-shadow: 5px 5px 6px white;
-}
+/* Relative skapar en positioneringsreferens för min pajillustration
+  som är placerad med position: absolute. */
 footer {
   position: relative;
   text-align: center;
@@ -240,6 +260,16 @@ footer {
   margin: 0 auto;
 }
 .footer-text {
+  /* Här justerar jag textens position för att den ska hamna bättre på sidan
+  i förhållande till sidfotens övriga innehåll. */
   position: relative;
   left: 78px;
 }
+.credits {
+  font-family: "google sans", Times, serif;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 5px 5px 6px white;
+}
+/*========================The End========================*/
